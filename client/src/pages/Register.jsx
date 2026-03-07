@@ -117,6 +117,7 @@ export default function Register() {
                   type={type} name={name}
                   value={form[name]} onChange={handleChange}
                   placeholder={placeholder} required
+                  autoComplete="off"
                   style={inputStyle}
                   onFocus={e => e.target.style.borderColor = 'var(--indigo)'}
                   onBlur={e => e.target.style.borderColor = 'var(--border)'}

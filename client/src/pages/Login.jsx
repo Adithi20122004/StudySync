@@ -97,6 +97,7 @@ export default function Login() {
                 type="email" name="email"
                 value={form.email} onChange={handleChange}
                 placeholder="you@university.edu" required
+                autoComplete="off"
                 style={{
                   width: '100%', background: 'var(--bg-base)',
                   border: '1px solid var(--border)', borderRadius: '8px',

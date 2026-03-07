@@ -200,7 +200,7 @@ export default function Groups() {
           <div style={{ display:'flex', flexDirection:'column', gap:'1rem' }}>
             <div>
               <label style={labelStyle}>Member Email</label>
-              <input style={inputStyle} type="email" placeholder="classmate@university.edu" value={memberEmail} onChange={e => setMemberEmail(e.target.value)} />
+              <input style={inputStyle} type="email" placeholder="classmate@university.edu" autoComplete="off" value={memberEmail} onChange={e => setMemberEmail(e.target.value)} />
             </div>
             {error && <div style={{ color:'var(--red)', fontSize:'0.875rem' }}>{error}</div>}
             <button onClick={handleAddMember} className="ss-btn-primary" style={{ width:'100%', padding:'0.75rem' }}>Add Member</button>
