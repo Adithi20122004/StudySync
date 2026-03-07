@@ -63,7 +63,6 @@ export default function Resources() {
     setResources(prev => prev.filter(r => r._id !== id));
   }
 
-  // Dynamic subjects from real data
   const allSubjects = Array.from(new Set(resources.map(r => r.subject).filter(Boolean)));
   const subjects    = ['All', ...allSubjects];
 

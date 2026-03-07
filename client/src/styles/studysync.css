@@ -1,11 +1,8 @@
-/* =============================================
-   StudySync Global Design System
-   Drop this into your src/styles/ or src/index.css
-   ============================================= */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;900&display=swap');
 
-/* ---- CSS Variables ---- */
+
 :root {
   --bg-base:        #0F172A;
   --bg-surface:     #1E293B;
@@ -37,7 +34,7 @@
   --shadow-float:   0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* ---- Reset ---- */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -56,7 +53,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ---- Logo ---- */
+
 .ss-logo {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -69,7 +66,7 @@ body {
   user-select: none;
 }
 
-/* ---- Sidebar ---- */
+
 .ss-sidebar {
   width: 250px;
   min-width: 250px;
@@ -110,7 +107,7 @@ body {
   font-weight: 600;
 }
 
-/* ---- Layout ---- */
+
 .ss-layout {
   display: flex;
   height: 100vh;
@@ -124,7 +121,7 @@ body {
   padding: 2rem;
 }
 
-/* ---- Top Bar ---- */
+
 .ss-topbar {
   display: flex;
   justify-content: space-between;
@@ -154,7 +151,7 @@ body {
   flex-shrink: 0;
 }
 
-/* ---- Stat Cards ---- */
+
 .ss-stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -223,14 +220,14 @@ body {
 .ss-stat-change.positive { color: var(--green); }
 .ss-stat-change.negative { color: var(--red); }
 
-/* ---- Dashboard Grid ---- */
+
 .ss-dashboard-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 1.5rem;
 }
 
-/* ---- Cards ---- */
+
 .ss-card {
   background: var(--bg-surface);
   padding: 2rem;
@@ -247,7 +244,6 @@ body {
   font-family: var(--font-display);
 }
 
-/* ---- Timeline ---- */
 .ss-timeline-item {
   padding-left: 2rem;
   position: relative;
@@ -291,7 +287,6 @@ body {
   color: var(--text-muted);
 }
 
-/* ---- Bar Chart ---- */
 .ss-chart {
   display: flex;
   align-items: flex-end;
@@ -324,7 +319,6 @@ body {
   font-weight: 600;
 }
 
-/* ---- Board Header ---- */
 .ss-board-header {
   display: flex;
   justify-content: space-between;
@@ -345,7 +339,6 @@ body {
   align-items: center;
 }
 
-/* ---- Filter Select ---- */
 .ss-filter-select {
   padding: 0.625rem 1.25rem;
   background: var(--bg-surface);
@@ -368,7 +361,6 @@ body {
   color: var(--text-accent);
 }
 
-/* ---- Buttons ---- */
 .ss-btn-primary {
   padding: 0.625rem 1.5rem;
   background: var(--grad-primary);
@@ -387,7 +379,6 @@ body {
   box-shadow: 0 8px 16px rgba(99, 102, 241, 0.4);
 }
 
-/* ---- Kanban ---- */
 .ss-kanban-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -423,7 +414,6 @@ body {
   font-weight: 600;
 }
 
-/* ---- Task Cards ---- */
 .ss-task-card {
   background: var(--bg-base);
   padding: 1.25rem;
@@ -460,7 +450,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* ---- Tags ---- */
 .ss-tags {
   display: flex;
   gap: 0.5rem;
@@ -478,7 +467,6 @@ body {
 .ss-tag.warning { background: rgba(245, 158, 11, 0.2); color: var(--amber); }
 .ss-tag.course  { background: rgba(99, 102, 241, 0.2); color: var(--text-accent); }
 
-/* ---- Progress Bar ---- */
 .ss-progress-bar {
   width: 100%;
   height: 6px;
@@ -495,7 +483,6 @@ body {
   transition: width 0.3s ease;
 }
 
-/* ---- Page Heading ---- */
 .ss-page-title {
   font-family: var(--font-display);
   font-size: 2rem;
@@ -503,13 +490,11 @@ body {
   color: var(--text-primary);
 }
 
-/* ---- Animations ---- */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---- Responsive ---- */
 @media (max-width: 1200px) {
   .ss-layout { flex-direction: column; height: auto; overflow: auto; }
   .ss-sidebar { width: 100%; min-width: unset; flex-direction: row; flex-wrap: wrap; border-right: none; border-bottom: 1px solid var(--border); }

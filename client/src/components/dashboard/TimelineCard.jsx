@@ -1,6 +1,3 @@
-// TimelineCard — shows upcoming deadlines as a vertical timeline
-// All logic unchanged — only class names updated to ss- design system
-
 const priorityConfig = {
   high:   { dot: 'urgent' },
   medium: { dot: 'warning' },

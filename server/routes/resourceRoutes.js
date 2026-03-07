@@ -3,7 +3,6 @@ const router   = express.Router();
 const auth     = require("../middleware/authMiddleware");
 const Resource = require("../models/Resource");
 
-// GET all resources for user
 router.get("/", auth, async (req, res) => {
   try {
     const resources = await Resource.find({ user: req.user }).sort({ createdAt: -1 });
@@ -11,7 +10,7 @@ router.get("/", auth, async (req, res) => {
   } catch (err) { res.status(500).json({ message: err.message }); }
 });
 
-// POST add resource (link or URL)
+
 router.post("/", auth, async (req, res) => {
   try {
     const { title, subject, type, url } = req.body;
@@ -20,7 +19,7 @@ router.post("/", auth, async (req, res) => {
   } catch (err) { res.status(500).json({ message: err.message }); }
 });
 
-// DELETE resource
+
 router.delete("/:id", auth, async (req, res) => {
   try {
     const resource = await Resource.findOneAndDelete({ _id: req.params.id, user: req.user });

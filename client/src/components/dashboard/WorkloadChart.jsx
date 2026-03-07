@@ -1,5 +1,3 @@
-// WorkloadChart — horizontal bar chart showing workload by subject
-
 const COLORS = ['#6366F1', '#F59E0B', '#10B981', '#EF4444', '#8B5CF6', '#06B6D4'];
 
 export default function WorkloadChart({ data = [] }) {

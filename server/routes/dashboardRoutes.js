@@ -3,7 +3,6 @@ const router  = express.Router();
 const auth    = require("../middleware/authMiddleware");
 const Task    = require("../models/Task");
 
-// GET /api/dashboard/stats
 router.get("/stats", auth, async (req, res) => {
   try {
     const tasks   = await Task.find({ user: req.user });
@@ -21,7 +20,6 @@ router.get("/stats", auth, async (req, res) => {
   }
 });
 
-// GET /api/dashboard/timeline
 router.get("/timeline", auth, async (req, res) => {
   try {
     const now     = new Date();
@@ -37,12 +35,11 @@ router.get("/timeline", auth, async (req, res) => {
   }
 });
 
-// GET /api/dashboard/workload
 router.get("/workload", auth, async (req, res) => {
   try {
     const tasks = await Task.find({ user: req.user, subject: { $exists: true, $ne: "" } });
 
-    // Aggregate hours per subject
+
     const map = {};
     tasks.forEach(t => {
       if (!t.subject) return;

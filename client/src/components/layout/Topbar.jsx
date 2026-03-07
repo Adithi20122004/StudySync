@@ -55,7 +55,6 @@ export default function Topbar() {
     fetchNotifs();
   }, []);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClick(e) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {

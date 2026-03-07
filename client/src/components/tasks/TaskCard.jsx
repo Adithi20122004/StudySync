@@ -1,5 +1,3 @@
-// TaskCard — all logic unchanged, only class names updated
-
 const priorityConfig = {
   high:   { variant: 'urgent',  label: '🔴 High'   },
   medium: { variant: 'warning', label: '🟡 Medium' },

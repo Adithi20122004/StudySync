@@ -4,7 +4,6 @@ const auth    = require("../middleware/authMiddleware");
 const Group   = require("../models/Group");
 const User    = require("../models/User");
 
-// GET all groups for current user
 router.get("/", auth, async (req, res) => {
   try {
     const groups = await Group.find({
@@ -14,7 +13,7 @@ router.get("/", auth, async (req, res) => {
   } catch (err) { res.status(500).json({ message: err.message }); }
 });
 
-// POST create group
+
 router.post("/", auth, async (req, res) => {
   try {
     const { name, subject, color } = req.body;
@@ -25,7 +24,7 @@ router.post("/", auth, async (req, res) => {
   } catch (err) { res.status(500).json({ message: err.message }); }
 });
 
-// DELETE group
+
 router.delete("/:id", auth, async (req, res) => {
   try {
     const group = await Group.findOne({ _id: req.params.id, owner: req.user });
@@ -35,7 +34,6 @@ router.delete("/:id", auth, async (req, res) => {
   } catch (err) { res.status(500).json({ message: err.message }); }
 });
 
-// POST add member by email
 router.post("/:id/members", auth, async (req, res) => {
   try {
     const { email } = req.body;
@@ -52,7 +50,6 @@ router.post("/:id/members", auth, async (req, res) => {
   } catch (err) { res.status(500).json({ message: err.message }); }
 });
 
-// POST add task to group
 router.post("/:id/tasks", auth, async (req, res) => {
   try {
     const group = await Group.findOne({
@@ -66,7 +63,6 @@ router.post("/:id/tasks", auth, async (req, res) => {
   } catch (err) { res.status(500).json({ message: err.message }); }
 });
 
-// PATCH update group task status
 router.patch("/:id/tasks/:taskId", auth, async (req, res) => {
   try {
     const group = await Group.findOne({ _id: req.params.id });

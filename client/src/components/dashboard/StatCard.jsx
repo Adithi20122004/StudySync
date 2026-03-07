@@ -1,12 +1,3 @@
-// StatCard — shows a single KPI metric on the dashboard
-// Props:
-//   title: string        — label e.g. "Due This Week"
-//   value: string|number — main number
-//   icon: string         — emoji icon
-//   variant: string      — "urgent" | "warning" | "success"
-//   trend: string        — optional e.g. "+2 from last week"
-//   trendUp: bool        — green if true, red if false
-
 export default function StatCard({ title, value, icon, variant = 'urgent', trend, trendUp }) {
   return (
     <div className={`ss-stat-card ${variant}`}>

@@ -24,11 +24,10 @@ export default function Groups() {
   const [groups, setGroups]         = useState([]);
   const [loading, setLoading]       = useState(true);
   const [showCreate, setShowCreate] = useState(false);
-  const [showAddMember, setShowAddMember] = useState(null); // group id
-  const [showAddTask, setShowAddTask]     = useState(null); // group id
+  const [showAddMember, setShowAddMember] = useState(null); 
+  const [showAddTask, setShowAddTask]     = useState(null); 
   const [error, setError]           = useState('');
 
-  // Form states
   const [newGroup, setNewGroup]     = useState({ name:'', subject:'', color:'#6366F1' });
   const [memberEmail, setMemberEmail] = useState('');
   const [newTask, setNewTask]       = useState({ title:'', priority:'medium', dueDate:'' });

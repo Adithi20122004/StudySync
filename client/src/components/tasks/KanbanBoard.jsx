@@ -1,5 +1,3 @@
-// KanbanBoard — all drag & drop logic unchanged, only class names updated
-
 import { useState } from 'react';
 import TaskCard from './TaskCard';
 
@@ -14,7 +12,6 @@ export default function KanbanBoard({ tasks = [], onStatusChange, onEdit, onDele
   const [draggedTask, setDraggedTask] = useState(null);
   const [overColumn, setOverColumn]   = useState(null);
 
-  // ── Drag handlers (unchanged) ──────────────────────
   function handleDragStart(task) {
     setDraggedTask(task);
   }

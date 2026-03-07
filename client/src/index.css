@@ -32,7 +32,7 @@ body {
   line-height: 1.6;
 }
 
-/* Scrollbar styling */
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -47,7 +47,7 @@ body {
   background: var(--primary);
 }
 
-/* Custom utility classes */
+
 .gradient-text {
   background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
   -webkit-background-clip: text;
@@ -70,7 +70,7 @@ body {
   box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
 }
 
-/* Kanban column drag-over */
+
 .kanban-drop-over {
   border-color: var(--primary) !important;
   background: rgba(99, 102, 241, 0.08) !important;
