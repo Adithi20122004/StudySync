@@ -34,7 +34,7 @@ Organize. Track. Never Miss a Deadline.
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/studysync-mern.git
+git clone https://github.com/Adithi20122004/studysync-mern.git
 cd studysync-mern
 ```
 
